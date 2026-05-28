@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayara Furtunato - Psicóloga Clínica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: linear-gradient(135deg, #6b8e6f 0%, #5a7a5e 100%);
+            border-radius: 30px;
+            padding: 40px 30px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .photo-wrapper {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .photo-frame {
+            width: 180px;
+            height: 220px;
+            border-radius: 50px;
+            overflow: hidden;
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        h1 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .crp {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            color: white;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-phone {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366 0%, #20ba58 100%);
+        }
+
+        .btn-instagram {
+            background: linear-gradient(135deg, #e1306c 0%, #c13584 100%);
+        }
+
+        .btn-facebook {
+            background: linear-gradient(135deg, #1877f2 0%, #0a66c2 100%);
+        }
+
+        .btn-twitter {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+
+        .btn-linktree {
+            background: linear-gradient(135deg, #b200ff 0%, #8b00cc 100%);
+        }
+
+        .footer {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .photo-frame {
+                width: 160px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="photo-wrapper">
+            <div class="photo-frame">
+                <img src="foto-nayara.jpg" alt="Foto de Nayara Furtunato">
+            </div>
+        </div>
+
+        <h1>Nayara Furtunato</h1>
+        <p class="subtitle">Psicóloga Clínica</p>
+        <p class="crp">CRP 04/77570</p>
+
+        <p class="description">Cuidando da saúde mental com escuta, acolhimento e responsabilidade.</p>
+
+        <div class="buttons-container">
+            <a href="tel:5533998218393" class="btn btn-phone">
+                <span>☎️</span> Ligar Agora
+            </a>
+            <a href="https://wa.me/5533998218393" class="btn btn-whatsapp">
+                <span>💬</span> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/nfurtunato/" class="btn btn-instagram">
+                <span>📷</span> Instagram
+            </a>
+            <a href="https://www.facebook.com/nayara.furtunatomtavares/" class="btn btn-facebook">
+                <span>👍</span> Facebook
+            </a>
+            <a href="https://x.com/NFURTUNATO" class="btn btn-twitter">
+                <span>𝕏</span> X (Twitter)
+            </a>
+            <a href="https://linktr.ee/nfurtunato" class="btn btn-linktree">
+                <span>🔗</span> Linktree / Site
+            </a>
+        </div>
+
+        <p class="footer">Clique nos botões para interagir</p>
+    </div>
+</body>
+</html>
