@@ -1,11 +1,6 @@
 import Link from "next/link";
-import {
-  Phone,
-  Mail,
-  MessageCircle,
-  Instagram,
-  Facebook,
-} from "lucide-react";
+import { Phone, Mail, MessageCircle } from "lucide-react";
+import { InstagramIcon, FacebookIcon } from "./icons";
 
 const socialLinks = [
   {
@@ -13,18 +8,21 @@ const socialLinks = [
     icon: MessageCircle,
     label: "WhatsApp",
     color: "hover:bg-green-600",
+    isLucide: true,
   },
   {
     href: "https://www.instagram.com/nfurtunato/",
-    icon: Instagram,
+    icon: InstagramIcon,
     label: "Instagram",
     color: "hover:bg-pink-600",
+    isLucide: false,
   },
   {
     href: "https://www.facebook.com/nayara.furtunatomtavares/",
-    icon: Facebook,
+    icon: FacebookIcon,
     label: "Facebook",
     color: "hover:bg-blue-600",
+    isLucide: false,
   },
 ];
 
@@ -104,7 +102,11 @@ export function ContactSection() {
                 className={`w-12 h-12 flex items-center justify-center rounded-full bg-foreground text-background transition-colors ${social.color}`}
                 aria-label={social.label}
               >
-                <social.icon size={20} />
+                {social.isLucide ? (
+                  <social.icon size={20} />
+                ) : (
+                  <social.icon size={20} />
+                )}
               </Link>
             ))}
           </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Instagram, Facebook, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { InstagramIcon, FacebookIcon } from "./icons";
 
 export function Footer() {
   return (
@@ -21,7 +22,7 @@ export function Footer() {
               className="text-background/60 hover:text-background transition-colors"
               aria-label="Instagram"
             >
-              <Instagram size={20} />
+              <InstagramIcon size={20} />
             </Link>
             <Link
               href="https://www.facebook.com/nayara.furtunatomtavares/"
@@ -30,7 +31,7 @@ export function Footer() {
               className="text-background/60 hover:text-background transition-colors"
               aria-label="Facebook"
             >
-              <Facebook size={20} />
+              <FacebookIcon size={20} />
             </Link>
             <Link
               href="https://linktr.ee/nfurtunato"
