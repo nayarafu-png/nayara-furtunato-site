@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nayara Furtunato - Psicóloga Clínica</title>
+    <meta name="description" content="Nayara Furtunato - Psicóloga especializada em terapia online. Atendimento humanizado para crianças, adolescentes, adultos e orientação parental.">
+    <meta name="keywords" content="psicóloga, terapia online, psicoterapia, ansiedade, autoestima, orientação parental, psicóloga infantil">
+    <meta property="og:title" content="Nayara Furtunato - Psicóloga">
+    <meta property="og:description" content="Você merece um espaço onde sua saúde emocional é prioridade.">
+    <meta property="og:image" content="https://nayara-furtunato-site.vercel.app/og-image.jpg">
+    <title>Nayara Furtunato - Psicóloga | Terapia Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,349 +20,625 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-            color: #333;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
+            color: #333;
+            background-color: #f9f7f4;
         }
 
-        .container {
-            max-width: 900px;
+        /* Header Navigation */
+        header {
+            background-color: #fff;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        nav {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
         }
 
-        /* Header com foto e info básica */
-        .header {
-            background: linear-gradient(135deg, #6b8e6f 0%, #5a7a5e 100%);
-            border-radius: 20px;
-            padding: 40px 30px;
-            text-align: center;
+        nav a {
+            text-decoration: none;
+            color: #6B8E7F;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #8B6B5F;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #6B8E7F 0%, #7BA08F 100%);
             color: white;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 6rem 2rem;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .photo-frame {
-            width: 150px;
-            height: 180px;
-            border-radius: 40px;
-            overflow: hidden;
-            border: 6px solid rgba(255, 255, 255, 0.3);
-            margin: 0 auto 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        .hero-initials {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
-        .photo-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            margin-bottom: 5px;
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
             opacity: 0.95;
         }
 
-        .crp {
-            font-size: 14px;
-            opacity: 0.85;
-            margin-bottom: 15px;
-        }
-
-        .tagline {
-            font-size: 15px;
-            font-style: italic;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-
-        /* Contatos */
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Seções de conteúdo */
-        .section {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .section h2 {
-            color: #6b8e6f;
-            font-size: 24px;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #6b8e6f;
-            padding-bottom: 10px;
-        }
-
-        .section h3 {
-            color: #5a7a5e;
-            font-size: 18px;
-            margin-top: 15px;
-            margin-bottom: 10px;
-        }
-
-        .section p {
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        .section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .section li {
-            color: #555;
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .section li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #6b8e6f;
-            font-weight: bold;
-        }
-
-        /* Botões de ação */
-        .buttons-container {
+        .hero-buttons {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            margin-top: 25px;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 20px;
+            padding: 0.75rem 1.5rem;
             border: none;
-            border-radius: 12px;
-            font-size: 16px;
+            border-radius: 8px;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            text-decoration: none;
             transition: all 0.3s ease;
-            color: white;
+            text-decoration: none;
+            display: inline-block;
             text-align: center;
+            min-width: 200px;
         }
 
-        .btn:hover {
+        .btn-primary {
+            background-color: white;
+            color: #6B8E7F;
+        }
+
+        .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-phone {
-            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
-        }
-
-        .btn-whatsapp {
-            background: linear-gradient(135deg, #25d366 0%, #20ba58 100%);
-        }
-
-        .btn-email {
-            background: linear-gradient(135deg, #ea4335 0%, #c5221f 100%);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
 
         .btn-instagram {
-            background: linear-gradient(135deg, #e1306c 0%, #c13584 100%);
+            background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            min-width: 220px;
         }
 
-        .btn-facebook {
-            background: linear-gradient(135deg, #1877f2 0%, #0a66c2 100%);
+        .btn-instagram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        .btn-twitter {
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            font-weight: 600;
         }
 
-        .btn-linktree {
-            background: linear-gradient(135deg, #b200ff 0%, #8b00cc 100%);
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
-        /* Grid para demandas */
-        .grid {
+        /* Section Styles */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            color: #6B8E7F;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        section p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+            border-left: 5px solid #6B8E7F;
+        }
+
+        .about-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
         }
 
-        .grid-item {
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #6b8e6f;
+        .about-image {
+            text-align: center;
         }
 
-        .grid-item strong {
-            color: #6b8e6f;
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(107, 142, 127, 0.2);
+            border: 4px solid #f0ebe5;
+        }
+
+        .about-text h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            color: #6B8E7F;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #f9f7f4;
+        }
+
+        .services-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #6B8E7F;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(107, 142, 127, 0.15);
+        }
+
+        .card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #6B8E7F;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Specialties Section */
+        .specialties {
+            background-color: white;
+        }
+
+        .specialty-item {
+            background-color: #f9f7f4;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            border-left: 5px solid #8B6B5F;
+        }
+
+        .specialty-item h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #6B8E7F;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .specialty-item p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Hours Section */
+        .hours {
+            background-color: #f9f7f4;
+            text-align: center;
+        }
+
+        .hours-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 500px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .hours-content p {
+            font-size: 1.1rem;
+            color: #6B8E7F;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Quote Section */
+        .quote {
+            background: linear-gradient(135deg, #6B8E7F 0%, #7BA08F 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .quote p {
+            font-size: 1.5rem;
+            font-style: italic;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .cta h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Footer */
-        .footer {
+        footer {
+            background-color: #2d3d37;
+            color: white;
+            padding: 3rem 2rem;
             text-align: center;
-            color: #888;
-            font-size: 13px;
-            margin-top: 40px;
-            padding: 20px;
-            border-top: 1px solid #eee;
         }
 
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .footer-info {
+            text-align: left;
+        }
+
+        .footer-info p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-logo {
+            width: 140px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .header {
-                padding: 30px 20px;
+            .hero h1 {
+                font-size: 2rem;
             }
 
-            h1 {
-                font-size: 24px;
+            .hero-initials {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
             }
 
-            .section {
-                padding: 20px;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .grid {
+            .about-content {
                 grid-template-columns: 1fr;
             }
+
+            .button-row {
+                flex-direction: column;
+            }
+
+            .btn {
+                min-width: 100%;
+            }
+
+            nav {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-info {
+                text-align: center;
+            }
         }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card, .specialty-item {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div class="photo-frame">
-                <img src="foto-nayara.jpg" alt="Foto de Nayara Furtunato">
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#como-posso-ajudar">Como Posso Ajudar</a>
+            <a href="#atendimento">Atendimento</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-initials">NF</div>
+        <h1>Um espaço seguro para cuidar da sua saúde emocional</h1>
+        <p>Sou Psicóloga especializada em terapia online</p>
+        
+        <div class="hero-buttons">
+            <div class="button-row">
+                <a href="https://wa.me/5533998218393" class="btn btn-primary">Agendar Atendimento</a>
+                <a href="https://instagram.com/nfurtunato" class="btn btn-instagram">Instagram @nfurtunato</a>
             </div>
-            <h1>Nayara Furtunato</h1>
-            <p class="subtitle">Psicóloga Clínica</p>
-            <p class="crp">CRP 04/77570</p>
-            <p class="tagline">Escuta ética, sigilosa e acolhedora para crianças, adolescentes e adulos em atendimento on-line</p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>📱</span> (33) 998218393
-                </div>
-                <div class="contact-item">
-                    <span>✉️</span> nayarafu@gmail.com
-                </div>
+            <a href="#como-posso-ajudar" class="btn btn-secondary">Conhecer Meu Trabalho</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <h2>Sobre Mim</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663619854659/NpMazFDmrNCnzWjv.png" alt="Nayara Furtunato - Psicóloga">
             </div>
-
-            <div class="buttons-container">
-                <a href="tel:5533998218393" class="btn btn-phone">☎️ Ligar Agora</a>
-                <a href="https://wa.me/5533998218393" class="btn btn-whatsapp">💬 WhatsApp</a>
-                <a href="mailto:nayarafu@gmail.com" class="btn btn-email">✉️ Email</a>
-                <a href="https://www.instagram.com/nfurtunato/" class="btn btn-instagram">📷 Instagram</a>
-                <a href="https://www.facebook.com/nayara.furtunatomtavares/" class="btn btn-facebook">👍 Facebook</a>
-                <a href="https://x.com/NFURTUNATO" class="btn btn-twitter">𝕏 X (Twitter)</a>
-                <a href="https://linktr.ee/nfurtunato" class="btn btn-linktree">🔗 Linktree</a>
-            </div>
-        </div>
-
-        <!-- Sobre Mim -->
-        <div class="section">
-            <h2>Sobre Mim</h2>
-            <p>Sou psicóloga formada pela Faculdade Anhanguera de Governador Valadares/MG, com pós-graduação em Psicologia Infantil e MBA em Gestão de Recursos Humanos e Departamento Pessoal pela Universidade Pitágoras Unopar Anhanguera.</p>
-            <p>Minha prática clínica é sustentada por diversas formações de extensão que ampliam minha atuação e fortalecem a condução do processo terapêutico. Minha abordagem une ética, escuta ativa e intencionalidade para oferecer um suporte terapêutico personalizado.</p>
-            <p>Longe de modelos engessados, adapto o processo à realidade de cada pessoa, priorizando resultados reais e o respeito à sua subjetividade.</p>
-        </div>
-
-        <!-- Atuação Clínica -->
-        <div class="section">
-            <h2>Atuação Clínica</h2>
-            <p>Realizo atendimentos on-line para crianças, adolescentes e adultos, proporcionando um espaço seguro, sigiloso e acolhedor. Meu trabalho é colaborativo e focado em encontrar possibilidades de mudança com leveza e compromisso.</p>
-            
-            <h3>Principais Objetivos Terapêuticos:</h3>
-            <ul>
-                <li>Fortalecimento da autoestima</li>
-                <li>Estímulo ao amadurecimento emocional</li>
-                <li>Reorganização interna diante de conflitos e desafios</li>
-                <li>Promoção de relações mais saudáveis</li>
-                <li>Desenvolvimento de habilidades emocionais e comportamentais</li>
-            </ul>
-            
-            <p style="margin-top: 20px;">Conduzo cada processo com responsabilidade, sensibilidade e respeito ao ritmo individual.</p>
-        </div>
-
-        <!-- Demandas Atendidas -->
-        <div class="section">
-            <h2>Demandas Atendidas</h2>
-            <p>Atuo no acompanhamento de questões como:</p>
-            <div class="grid">
-                <div class="grid-item">
-                    <strong>Ansiedade e Estresse</strong>
-                </div>
-                <div class="grid-item">
-                    <strong>Depressão</strong>
-                </div>
-                <div class="grid-item">
-                    <strong>Dificuldades Emocionais na Infância</strong>
-                </div>
-                <div class="grid-item">
-                    <strong>Baixa Autoestima</strong>
-                </div>
-                <div class="grid-item">
-                    <strong>Conflitos nos Relacionamentos</strong>
-                </div>
-                <div class="grid-item">
-                    <strong>Luto</strong>
-                </div>
-                <div class="grid-item">
-                    <strong>Autoconhecimento</strong>
-                </div>
-                <div class="grid-item">
-                    <strong>Desenvolvimento Pessoal</strong>
-                </div>
+            <div class="about-text">
+                <h3>Nayara Furtunato</h3>
+                <p><strong>Psicóloga (CRP: 04/77570)</strong></p>
+                <p>Ofereço um espaço de escuta acolhedora, ética e comprometida com o cuidado emocional.</p>
+                <p>Acredito que cada pessoa possui uma história única e merece ser compreendida em sua singularidade. A psicoterapia favorece o autoconhecimento, o fortalecimento emocional e o desenvolvimento de recursos para lidar com os desafios da vida de forma mais equilibrada e saudável.</p>
+                <p>Meu compromisso é oferecer um atendimento humanizado, pautado no respeito, na ética profissional e na construção de um vínculo terapêutico seguro e acolhedor.</p>
+                <p><strong>Formação:</strong> Pós-graduada em Psicologia Infantil e em Gestão de Recursos Humanos, além de diversas formações complementares que ampliam minha atuação clínica.</p>
             </div>
         </div>
+    </section>
 
-        <!-- Compromisso -->
-        <div class="section">
-            <h2>Meu Compromisso</h2>
-            <p>Ofereço um atendimento técnico, humanizado e orientado para o desenvolvimento emocional e o bem-estar. Cada sessão é um encontro genuíno onde sua história, suas emoções e suas necessidades são o centro do processo terapêutico.</p>
-            <p>Acredito que a mudança é possível quando há espaço para ser ouvido, compreendido e acolhido. Estou aqui para acompanhá-lo nessa jornada.</p>
+    <!-- Como Posso Ajudar -->
+    <section class="services" id="como-posso-ajudar">
+        <h2>Como Posso Ajudar</h2>
+        <div class="services-intro">
+            <p>Cada pessoa vivencia desafios, emoções e experiências de forma única. Através da psicoterapia, ofereço um espaço seguro para acolher sofrimentos, promover autoconhecimento e construir caminhos mais saudáveis para lidar com as dificuldades do cotidiano.</p>
+            <p>O acompanhamento psicológico pode contribuir para o fortalecimento emocional, melhoria dos relacionamentos, desenvolvimento da autoestima e manejo de questões que impactam o bem-estar e a qualidade de vida.</p>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <p>© 2026 Nayara Furtunato - Psicóloga Clínica | Atendimento On-line</p>
-            <p>Clique nos botões acima para entrar em contato</p>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Ansiedade e Preocupação</h3>
+                <p>Apoio para compreender e gerenciar a ansiedade, reduzindo o impacto na vida cotidiana e desenvolvendo estratégias de bem-estar emocional.</p>
+            </div>
+            <div class="card">
+                <h3>Autoestima e Autoimagem</h3>
+                <p>Fortalecimento da confiança em si mesmo, desenvolvimento de uma relação mais positiva com a própria imagem e valorização pessoal.</p>
+            </div>
+            <div class="card">
+                <h3>Relacionamentos</h3>
+                <p>Compreensão dos padrões relacionais e fortalecimento de vínculos mais saudáveis e satisfatórios.</p>
+            </div>
+            <div class="card">
+                <h3>Autoconhecimento</h3>
+                <p>Um processo de reflexão e descoberta que favorece maior compreensão de si mesmo e das próprias escolhas.</p>
+            </div>
+            <div class="card">
+                <h3>Sobrecarga Emocional</h3>
+                <p>Apoio para lidar com o excesso de responsabilidades, o cansaço emocional e as pressões do cotidiano.</p>
+            </div>
+            <div class="card">
+                <h3>Dificuldades Comportamentais</h3>
+                <p>Compreensão e manejo de comportamentos que geram sofrimento ou impactam as relações e a qualidade de vida.</p>
+            </div>
+            <div class="card">
+                <h3>Desenvolvimento Infantil</h3>
+                <p>Promoção do desenvolvimento emocional, social e comportamental da criança, respeitando suas necessidades e singularidades.</p>
+            </div>
+            <div class="card">
+                <h3>Transições e Perdas</h3>
+                <p>Acompanhamento durante momentos de mudança, luto e adaptação a novas realidades.</p>
+            </div>
+            <div class="card">
+                <h3>Desenvolvimento Pessoal</h3>
+                <p>Apoio para crescimento pessoal, realização de objetivos e construção de uma vida mais significativa.</p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section class="specialties" id="atendimento">
+        <h2>Meus Atendimentos</h2>
+
+        <div class="specialty-item">
+            <h3>Psicoterapia para Crianças</h3>
+            <p>Ofereço um espaço lúdico e seguro onde as crianças podem expressar emoções, compreender sentimentos e desenvolver habilidades emocionais. O trabalho favorece o bem-estar emocional, a autoconfiança e o desenvolvimento saudável.</p>
+        </div>
+
+        <div class="specialty-item">
+            <h3>Psicoterapia para Adolescentes</h3>
+            <p>Acompanhamento especializado durante essa fase de transformações. Ofereço escuta qualificada para lidar com desafios emocionais, relacionamentos, identidade e desenvolvimento de recursos para enfrentar as demandas da adolescência.</p>
+        </div>
+
+        <div class="specialty-item">
+            <h3>Orientação Parental</h3>
+            <p>Um espaço destinado a pais, responsáveis e cuidadores que desejam compreender melhor as necessidades emocionais e comportamentais de crianças e adolescentes. Por meio de acolhimento, escuta qualificada e psicoeducação, abordamos temas como limites, autoestima, sexualidade, bullying, comportamento, vínculos familiares e manejo emocional. O objetivo é fortalecer as competências parentais, promover relações mais saudáveis e contribuir para o desenvolvimento emocional das crianças e adolescentes.</p>
+        </div>
+
+        <div class="specialty-item">
+            <h3>Atendimento Online</h3>
+            <p>A psicoterapia online possibilita o acesso ao cuidado emocional de forma prática, segura e acessível, onde quer que você esteja no Brasil. Os atendimentos são realizados por videochamada, em um ambiente confidencial e acolhedor, respeitando os mesmos princípios éticos e a qualidade do acompanhamento psicológico. Tudo o que você precisa é de uma conexão estável com a internet e um espaço tranquilo para a sua sessão.</p>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section class="hours">
+        <h2>Horários de Atendimento</h2>
+        <div class="hours-content">
+            <p>Segunda a sexta-feira</p>
+            <p>15h30 às 18h30</p>
+            <p style="font-size: 0.95rem; margin-top: 1rem;">Os agendamentos acontecem mediante disponibilidade de horário.</p>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote">
+        <p>"Você merece um espaço onde sua saúde emocional é prioridade."</p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contato">
+        <h2>Vamos Começar?</h2>
+        <p>Se você está buscando um espaço de acolhimento, escuta qualificada e cuidado emocional, estou aqui para ajudar. Entre em contato e agende sua primeira sessão.</p>
+        <a href="https://wa.me/5533998218393" class="btn btn-primary">Agendar Atendimento via WhatsApp</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>Nayara Furtunato | Psicóloga</strong></p>
+                <p>CRP: 04/77570</p>
+                <p>Atendimento exclusivamente online</p>
+                <p>WhatsApp: (33) 9 9821-8393</p>
+                <p>E-mail: nayarafu@gmail.com</p>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem;">
+                    <strong>Redes Sociais:</strong>
+                </p>
+                <p style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 0.5rem;">
+                    <a href="tel:+5533998218393" style="color: #a8c9bf; text-decoration: none; font-weight: 500;">📞 Ligar</a>
+                    <a href="https://wa.me/5533998218393" style="color: #a8c9bf; text-decoration: none; font-weight: 500;">💬 WhatsApp</a>
+                    <a href="mailto:nayarafu@gmail.com" style="color: #a8c9bf; text-decoration: none; font-weight: 500;">✉️ Email</a>
+                    <a href="https://instagram.com/nfurtunato" style="color: #a8c9bf; text-decoration: none; font-weight: 500;">📷 Instagram</a>
+                    <a href="https://facebook.com/nayara.furtunato" style="color: #a8c9bf; text-decoration: none; font-weight: 500;">👍 Facebook</a>
+                    <a href="https://x.com/nfurtunato" style="color: #a8c9bf; text-decoration: none; font-weight: 500;">𝕏 Twitter</a>
+                    <a href="https://linktr.ee/nfurtunato" style="color: #a8c9bf; text-decoration: none; font-weight: 500;">🔗 Linktree</a>
+                </p>
+            </div>
+            <div class="footer-logo">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663619854659/BGUJaBGOtTHaYVIZ.png" alt="Logo Nayara Furtunato">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        });
+
+        document.querySelectorAll('.card, .specialty-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
